@@ -75,6 +75,83 @@
       box-shadow: 0 15px 40px rgba(255, 212, 0, 0.6);
     }
 
+    /* Value Proposition Section */
+    .value-section {
+      background: linear-gradient(135deg, rgba(230, 57, 70, 0.15), rgba(30, 202, 211, 0.15));
+      border: 3px solid #FFD400;
+      border-radius: 20px;
+      padding: 50px 40px;
+      margin: 40px 0 60px;
+    }
+    .value-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #FFD400;
+    }
+    .value-intro {
+      text-align: center;
+      font-size: 1.15rem;
+      color: #F6F1E6;
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .value-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(30, 202, 211, 0.4);
+      border-radius: 15px;
+      padding: 30px 25px;
+      transition: all 0.3s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-5px);
+      border-color: #FFD400;
+      box-shadow: 0 15px 40px rgba(255, 212, 0, 0.3);
+    }
+    .value-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #FFD400;
+    }
+    .value-card .highlight {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #1ECAD3;
+      margin: 10px 0;
+    }
+    .value-card p {
+      color: #F6F1E6;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+    .roi-banner {
+      background: rgba(255, 212, 0, 0.15);
+      border: 2px solid #FFD400;
+      border-radius: 15px;
+      padding: 25px;
+      margin-top: 35px;
+      text-align: center;
+    }
+    .roi-banner h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      color: #FFD400;
+      margin-bottom: 12px;
+    }
+    .roi-banner p {
+      font-size: 1.1rem;
+      color: #F6F1E6;
+      line-height: 1.8;
+    }
+
     .pricing-section {
       padding: 60px 20px;
     }
@@ -322,6 +399,9 @@
         width: 200px;
         height: 200px;
       }
+      .value-section h2 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -340,6 +420,85 @@
     </header>
 
     <main>
+      <!-- VALUE PROPOSITION SECTION -->
+      <section class="value-section">
+        <h2>🚀 Why This Investment Pays For Itself</h2>
+        <p class="value-intro">
+          Current systems are costing you thousands per year. Here's how a custom website eliminates those costs,
+          attracts more guests, and positions Cape Capsules as Muizenberg's premier beachfront destination.
+        </p>
+
+        <div class="value-grid">
+          <div class="value-card">
+            <h3>💸 Ditch NightsBridge Forever</h3>
+            <p class="highlight">Save R6,000 - R10,000/year</p>
+            <p>
+              NightsBridge costs R500-800/month for basic features. My custom booking system handles availability,
+              calendar sync, and booking management—no monthly fees, ever. <strong>Year 1 ROI alone covers 40-65% of build cost.</strong>
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h3>🌍 420-Friendly = Global Niche</h3>
+            <p class="highlight">Untapped Market Advantage</p>
+            <p>
+              You're <strong>the only beachfront 420-friendly spot in Muizenberg.</strong> Position this globally
+              and attract cannabis-friendly travelers from Europe, North America, and Australia—a loyal, underserved audience
+              searching for exactly what you offer.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h3>🏄 Competitive Surf Packages</h3>
+            <p class="highlight">Higher-Value Stays</p>
+            <p>
+              Bundle accommodation + surf lessons at competitive rates. Partner with local instructors,
+              create premium packages (R1,500-2,500/stay), and turn budget travelers into higher-spending guests.
+              <strong>Increase average booking value by 30-50%.</strong>
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h3>✨ Google Business Optimization</h3>
+            <p class="highlight">Instant Visibility Boost</p>
+            <p>
+              Your Google Business profile is your #1 discovery tool. I'll optimize photos, respond to reviews,
+              post weekly updates, and fix missing info. <strong>Expect 40-60% more profile views and direct inquiries</strong>
+              within 60 days.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h3>🚫 Cut Out OTA Commissions</h3>
+            <p class="highlight">Keep 100% of Revenue</p>
+            <p>
+              Booking.com and Hostelworld charge 15-18% commission per booking. With direct booking via your site,
+              you keep every rand. <strong>Just 10 direct bookings/month = R3,000-5,000 saved.</strong>
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h3>📊 Real-Time Availability</h3>
+            <p class="highlight">Zero Double Bookings</p>
+            <p>
+              Custom booking system syncs availability in real-time across all platforms. Guests see live openings,
+              book instantly, and receive automated confirmations. <strong>Professional experience = higher conversion.</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="roi-banner">
+          <h3>📈 12-Month ROI Projection</h3>
+          <p>
+            <strong>Investment:</strong> R15,000 (Complete Package)<br>
+            <strong>Year 1 Savings:</strong> R6,000 (NightsBridge) + R4,000 (OTA commissions) = <strong>R10,000</strong><br>
+            <strong>Net Cost After Savings:</strong> R5,000 — or just <strong>R416/month</strong> for a system you own forever.<br>
+            <strong>Year 2+:</strong> Pure savings—no subscriptions, no commissions, just bookings.
+          </p>
+        </div>
+      </section>
+      <!-- END VALUE PROPOSITION -->
+
       <section class="pricing-section">
         <h2 class="section-title">Website Package Options</h2>
 
