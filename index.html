@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cape Capsules Website Proposal | Caramel Digital Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0B1F3B 0%, #083E8C 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        
+        .logo-showcase img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #FFD400;
+            box-shadow: 0 10px 40px rgba(255, 212, 0, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 20px 0;
+            background: linear-gradient(90deg, #FFD400, #1ECAD3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #F6F1E6;
+            margin-bottom: 30px;
+        }
+        
+        .demo-link {
+            display: inline-block;
+            background: linear-gradient(90deg, #E63946, #0B5ED7);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .demo-link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(230, 57, 70, 0.6);
+        }
+        
+        .pricing-section {
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #FFD400;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 212, 0, 0.3);
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #FFD400, #1ECAD3);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: #FFD400;
+            box-shadow: 0 20px 50px rgba(255, 212, 0, 0.3);
+        }
+        
+        .pricing-card.featured {
+            border-color: #FFD400;
+            background: rgba(255, 212, 0, 0.1);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #E63946;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #FFD400;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #1ECAD3;
+            margin-bottom: 10px;
+        }
+        
+        .price-note {
+            font-size: 0.9rem;
+            color: #F6F1E6;
+            margin-bottom: 30px;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .features-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #F6F1E6;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #1ECAD3;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(90deg, #FFD400, #1ECAD3);
+            color: #0B1F3B;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 212, 0, 0.5);
+        }
+        
+        .trade-box {
+            background: linear-gradient(135deg, #E63946, #0B5ED7);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 20px 60px rgba(230, 57, 70, 0.4);
+        }
+        
+        .trade-box h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #FFD400;
+        }
+        
+        .trade-box p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .marketing-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin: 60px 0;
+        }
+        
+        .marketing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .marketing-card {
+            background: rgba(30, 202, 211, 0.1);
+            border: 2px solid #1ECAD3;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .marketing-card h4 {
+            color: #FFD400;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .marketing-card p {
+            color: #F6F1E6;
+            font-size: 0.95rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 212, 0, 0.2);
+            margin-top: 60px;
+        }
+        
+        footer p {
+            color: #F6F1E6;
+            margin-bottom: 10px;
+        }
+        
+        footer a {
+            color: #1ECAD3;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .section-title { font-size: 1.5rem; }
+            .price { font-size: 2.5rem; }
+            .pricing-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-showcase">
+                <img src="https://raw.githubusercontent.com/LilyCaramel2/Cape-Capsules-Backpackers/main/public/brand/cape-capsules-logo.jpg" alt="Cape Capsules Logo">
+            </div>
+            <h1>Cape Capsules Website Proposal</h1>
+            <p class="subtitle">Modern, Mobile-Friendly, Direct Booking System</p>
+            <a href="https://lilycaramel2.github.io/Cape-Capsules-Backpackers/" target="_blank" class="demo-link">
+                👉 View Live Demo Site
+            </a>
+        </header>
+        
+        <section class="pricing-section">
+            <h2 class="section-title">Website Package Options</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="card-title">Essential</h3>
+                    <div class="price">R8,500</div>
+                    <p class="price-note">5 days turnaround</p>
+                    <ul class="features-list">
+                        <li>Responsive modern design</li>
+                        <li>Custom logo (included)</li>
+                        <li>Mobile-friendly layout</li>
+                        <li>5 core sections</li>
+                        <li>WhatsApp booking button</li>
+                        <li>Basic SEO setup</li>
+                    </ul>
+                    <a href="mailto:lily@carameldigitaldesign.online?subject=Cape%20Capsules%20Essential%20Package" class="cta-button">Choose Essential</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <span class="badge">RECOMMENDED</span>
+                    <h3 class="card-title">Complete</h3>
+                    <div class="price">R15,000</div>
+                    <p class="price-note">7 days turnaround</p>
+                    <ul class="features-list">
+                        <li>Everything in Essential</li>
+                        <li>Custom booking system</li>
+                        <li>Live availability calendar</li>
+                        <li>Google Maps integration</li>
+                        <li>Animated effects</li>
+                        <li>All 8 sections complete</li>
+                        <li>Image optimization</li>
+                        <li>Marketing quick-wins guide</li>
+                    </ul>
+                    <a href="mailto:lily@carameldigitaldesign.online?subject=Cape%20Capsules%20Complete%20Package" class="cta-button">Choose Complete</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 class="card-title">Full Build</h3>
+                    <div class="price">R22,000</div>
+                    <p class="price-note">10 days + support</p>
+                    <ul class="features-list">
+                        <li>Everything in Complete</li>
+                        <li>PayFast payment gateway</li>
+                        <li>Email confirmations</li>
+                        <li>Calendar sync system</li>
+                        <li>Review automation</li>
+                        <li>30 days post-launch support</li>
+                        <li>Social media graphics</li>
+                    </ul>
+                    <a href="mailto:lily@carameldigitaldesign.online?subject=Cape%20Capsules%20Full%20Build%20Package" class="cta-button">Choose Full Build</a>
+                </div>
+            </div>
+            
+            <div class="trade-box">
+                <h3>💡 Alternative: Accommodation Trade</h3>
+                <p>Complete package (R15,000 value) in exchange for 2 months accommodation + storage arrangement.</p>
+                <p>Includes website, booking system, marketing setup, and ongoing optimization during stay.</p>
+                <a href="mailto:lily@carameldigitaldesign.online?subject=Cape%20Capsules%20Trade%20Option" class="cta-button" style="max-width: 300px; margin: 20px auto 0;">Let's Discuss This Option</a>
+            </div>
+        </section>
+        
+        <section class="marketing-section">
+            <h2 class="section-title">Bonus: Marketing Quick Wins</h2>
+            <p style="text-align: center; color: #F6F1E6; max-width: 800px; margin: 0 auto 20px;">
+                Included with Complete & Full Build packages - strategies to fill your capsules faster
+            </p>
+            
+            <div class="marketing-grid">
+                <div class="marketing-card">
+                    <h4>Google Business Fix</h4>
+                    <p>Optimize your profile, update photos, respond to reviews, post weekly updates. 40% visibility boost.</p>
+                </div>
+                
+                <div class="marketing-card">
+                    <h4>420 Positioning</h4>
+                    <p>Target untapped market of cannabis-friendly travelers. Only beachfront 420-friendly spot in Muizenberg.</p>
+                </div>
+                
+                <div class="marketing-card">
+                    <h4>Direct Booking Push</h4>
+                    <p>Cut Booking.com 15% commission. Your site captures direct bookings at 0% fees.</p>
+                </div>
+                
+                <div class="marketing-card">
+                    <h4>Surf Package Optimization</h4>
+                    <p>Partner with local instructors, offer competitive rates, create new revenue stream.</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p><strong>Lily Godden</strong> | Caramel Digital Design</p>
+            <p>Email: <a href="mailto:lily@carameldigitaldesign.online">lily@carameldigitaldesign.online</a></p>
+            <p>Web: <a href="https://carameldigitaldesign.online" target="_blank">carameldigitaldesign.online</a></p>
+        </footer>
+    </div>
+</body>
+</html>
