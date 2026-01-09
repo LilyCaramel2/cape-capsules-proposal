@@ -45,15 +45,15 @@
             50% { transform: translateY(-20px); }
         }
         
+        h1, h2, h3 {
+            color: #1ECAD3;
+        }
+        
         h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 2.5rem;
             font-weight: 900;
             margin: 20px 0;
-            background: linear-gradient(90deg, #FFD400, #1ECAD3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
         
         .subtitle {
@@ -64,20 +64,20 @@
         
         .demo-link {
             display: inline-block;
-            background: linear-gradient(90deg, #E63946, #0B5ED7);
-            color: white;
+            background: #FFD400;
+            color: #0B1F3B;
             padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.1rem;
-            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
+            box-shadow: 0 10px 30px rgba(255, 212, 0, 0.4);
             transition: all 0.3s ease;
         }
         
         .demo-link:hover {
             transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(230, 57, 70, 0.6);
+            box-shadow: 0 15px 40px rgba(255, 212, 0, 0.6);
         }
         
         .pricing-section {
@@ -90,7 +90,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 50px;
-            color: #FFD400;
+            color: #1ECAD3;
         }
         
         .pricing-grid {
@@ -103,12 +103,16 @@
         .pricing-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 212, 0, 0.3);
-            border-radius: 20px;
             padding: 40px 30px;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+        }
+        
+        .package-card {
+            border: 2px solid rgba(255, 212, 0, 0.5);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
         }
         
         .pricing-card::before {
@@ -128,8 +132,7 @@
         }
         
         .pricing-card.featured {
-            border-color: #FFD400;
-            background: rgba(255, 212, 0, 0.1);
+            background: rgba(30, 202, 211, 0.12);
         }
         
         .badge {
@@ -143,18 +146,18 @@
             margin-bottom: 15px;
         }
         
-        .card-title {
+        .package-card h3 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
             margin-bottom: 15px;
-            color: #FFD400;
+            color: #1ECAD3;
         }
         
-        .price {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #1ECAD3;
+        .package-card .price {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #FFD400;
             margin-bottom: 10px;
         }
         
@@ -188,7 +191,7 @@
         .cta-button {
             display: block;
             width: 100%;
-            background: linear-gradient(90deg, #FFD400, #1ECAD3);
+            background: #FFD400;
             color: #0B1F3B;
             padding: 15px;
             border: none;
@@ -207,19 +210,20 @@
         }
         
         .trade-box {
-            background: linear-gradient(135deg, #E63946, #0B5ED7);
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.2), rgba(11, 94, 215, 0.2));
+            border: 2px solid rgba(255, 212, 0, 0.3);
             border-radius: 20px;
             padding: 40px;
             text-align: center;
             margin-top: 40px;
-            box-shadow: 0 20px 60px rgba(230, 57, 70, 0.4);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
         
         .trade-box h3 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: #FFD400;
+            color: #1ECAD3;
         }
         
         .trade-box p {
@@ -252,7 +256,7 @@
         }
         
         .marketing-card h4 {
-            color: #FFD400;
+            color: #1ECAD3;
             font-size: 1.3rem;
             margin-bottom: 15px;
         }
@@ -282,7 +286,7 @@
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .section-title { font-size: 1.5rem; }
-            .price { font-size: 2.5rem; }
+            .package-card .price { font-size: 2rem; }
             .pricing-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -291,7 +295,7 @@
     <div class="container">
         <header>
             <div class="logo-showcase">
-                <img src="https://raw.githubusercontent.com/LilyCaramel2/Cape-Capsules-Backpackers/main/public/brand/cape-capsules-logo.jpg" alt="Cape Capsules Logo">
+                <img src="cape-capsules-logo.jpg" alt="Cape Capsules Logo">
             </div>
             <h1>Cape Capsules Website Proposal</h1>
             <p class="subtitle">Modern, Mobile-Friendly, Direct Booking System</p>
@@ -304,8 +308,8 @@
             <h2 class="section-title">Website Package Options</h2>
             
             <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 class="card-title">Essential</h3>
+                <div class="pricing-card package-card">
+                    <h3>Essential</h3>
                     <div class="price">R8,500</div>
                     <p class="price-note">5 days turnaround</p>
                     <ul class="features-list">
@@ -319,9 +323,9 @@
                     <a href="mailto:lily@carameldigitaldesign.online?subject=Cape%20Capsules%20Essential%20Package" class="cta-button">Choose Essential</a>
                 </div>
                 
-                <div class="pricing-card featured">
+                <div class="pricing-card package-card featured">
                     <span class="badge">RECOMMENDED</span>
-                    <h3 class="card-title">Complete</h3>
+                    <h3>Complete</h3>
                     <div class="price">R15,000</div>
                     <p class="price-note">7 days turnaround</p>
                     <ul class="features-list">
@@ -337,8 +341,8 @@
                     <a href="mailto:lily@carameldigitaldesign.online?subject=Cape%20Capsules%20Complete%20Package" class="cta-button">Choose Complete</a>
                 </div>
                 
-                <div class="pricing-card">
-                    <h3 class="card-title">Full Build</h3>
+                <div class="pricing-card package-card">
+                    <h3>Full Build</h3>
                     <div class="price">R22,000</div>
                     <p class="price-note">10 days + support</p>
                     <ul class="features-list">
