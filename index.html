@@ -23,7 +23,10 @@
     }
     header {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 60px 20px 60px;
+    }
+    .logo-showcase {
+      margin-bottom: 30px;
     }
     .logo-showcase img {
       width: 300px;
@@ -70,28 +73,6 @@
     .demo-link:hover {
       transform: scale(1.1);
       box-shadow: 0 15px 40px rgba(255, 212, 0, 0.6);
-    }
-
-    /* Optional hero layout helpers if you want side‑by‑side */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-    .hero-visual img {
-      max-width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-      border: 3px solid rgba(255, 212, 0, 0.6);
-    }
-    @media (min-width: 900px) {
-      .hero {
-        flex-direction: row;
-        align-items: flex-start;
-      }
     }
 
     .pricing-section {
@@ -226,6 +207,38 @@
       margin-bottom: 20px;
       line-height: 1.8;
     }
+
+    /* Website Vision Showcase Section */
+    .vision-showcase {
+      margin: 60px 0;
+      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 20px;
+      text-align: center;
+    }
+    .vision-showcase h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .vision-showcase p {
+      font-size: 1.1rem;
+      color: #F6F1E6;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .vision-mockup {
+      margin-top: 30px;
+    }
+    .vision-mockup img {
+      max-width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      border: 3px solid rgba(255, 212, 0, 0.6);
+    }
+
     .marketing-section {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
@@ -319,25 +332,11 @@
       <div class="logo-showcase">
         <img src="cape-capsules-logo.png" alt="Cape Capsules Backpackers logo">
       </div>
-
-      <!-- HERO WITH MOCKUP -->
-      <section class="hero">
-        <div class="hero-copy">
-          <h1>Cape Capsules Website Proposal</h1>
-          <p class="subtitle">Modern, Mobile-Friendly, Direct Booking System</p>
-          <a class="demo-link" href="https://lilycaramel2.github.io/Cape-Capsules-Backpackers/">
-            👉 View Live Demo Site
-          </a>
-        </div>
-
-        <div class="hero-visual">
-          <img
-            src="cape-capsules-website-upgrade-vision.jpg"
-            alt="Cape Capsules homepage upgrade vision showing Muizenberg surf, colorful huts, and booking panel"
-          >
-        </div>
-      </section>
-      <!-- END HERO -->
+      <h1>Cape Capsules Website Proposal</h1>
+      <p class="subtitle">Modern, Mobile-Friendly, Direct Booking System</p>
+      <a class="demo-link" href="https://lilycaramel2.github.io/Cape-Capsules-Backpackers/">
+        👉 View Live Demo Site
+      </a>
     </header>
 
     <main>
@@ -412,6 +411,22 @@
           </a>
         </div>
       </section>
+
+      <!-- WEBSITE VISION SHOWCASE -->
+      <section class="vision-showcase">
+        <h2>The Website Vision</h2>
+        <p>
+          Here's a preview of the refreshed Cape Capsules website. Vibrant Muizenberg surf vibes,
+          colorful beach hut aesthetics, and a prominent booking panel designed to convert visitors into guests.
+        </p>
+        <div class="vision-mockup">
+          <img
+            src="cape-capsules-website-upgrade-vision.jpg"
+            alt="Cape Capsules homepage upgrade vision showing Muizenberg surf, colorful huts, and booking panel"
+          >
+        </div>
+      </section>
+      <!-- END VISION SHOWCASE -->
 
       <!-- BRANDING / PALETTE BOARD SECTION -->
       <section class="branding-system">
